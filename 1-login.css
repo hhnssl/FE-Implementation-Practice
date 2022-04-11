@@ -1,0 +1,88 @@
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Spoqa Han Sans Neo", "sans-serif";
+}
+
+a {
+    text-decoration: none;
+}
+body {
+    background-color: blue;
+}
+
+.frame {
+    background-color: #fff;
+    width: 400px;
+    height: 200px;
+    padding: 30px 25px;
+}
+
+.card {
+    width: 350px;
+    height: 140px;
+    border: 1px solid #dbdbdb;
+    border-radius: 5px;
+
+    padding-left: 16px;
+}
+
+.card p {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.25;
+
+    margin-top: 20px;
+}
+
+.card p + a {
+    display: inline-block;
+    width: 318px;
+    height: 40px;
+    background: #711bff;
+    border-radius: 4px;
+
+    margin-top: 15px;
+    text-align: center;
+
+    /* vertical-align: bottom; */
+    /* padding: 13px auto; */
+    /* align-items: flex-end; */
+}
+
+.card p + a img {
+    width: 64px;
+    height: 18px;
+}
+
+.card p + a span {
+    font-size: 12px;
+    font-weight: 500px;
+    line-height: 1.25;
+    color: #ffffff;
+}
+
+.others {
+    margin-top: 17px;
+}
+
+.others a {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.25;
+
+    color: #767676;
+}
+
+.others a:nth-child(3) {
+    float: right;
+    padding-right: 16px;
+}
+
+.others a img {
+    width: 16px;
+    height: 16px;
+}
