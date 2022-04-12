@@ -1,0 +1,135 @@
+<!-- figma에서 보이는 값에서 1px 뺀 값으로 padding 주는 이유: Border 포함한 값이라서 -->
+
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title></title>
+        <link rel="stylesheet" href="./reset.css" />
+        <style>
+            /* 유틸리티성 css는 처음에 넣는다. */
+            .blind {
+                /* IR 기법!!! h2 없애주기~ */
+                position: absolute;
+                clip: rect(0 0 0 0);
+                width: 1px;
+                height: 1px;
+                margin: -1px;
+                overflow: hidden;
+            }
+
+            .clear-fix::after {
+                /* content 없으면 가상요소 안나온다! */
+                content: "";
+                display: block;
+                clear: both;
+            }
+
+            .content-login {
+                /* 레이아웃 같이 중요한것은 위에 배치(width, padding, margin 같은) */
+                margin: 20px auto;
+                width: 350px;
+                padding: 18px 15px 17px;
+                border: 1px solid #dbdbdb;
+                border-radius: 5px;
+                box-sizing: border-box;
+            }
+
+            .content-login a {
+                text-decoration: none;
+
+                color: inherit;
+            }
+
+            .content-login .txt-login {
+                margin-bottom: 16px;
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 15px;
+                color: #000000;
+            }
+
+            .content-login .link-login {
+                display: block;
+                padding: 10px 0 12px;
+                margin-bottom: 16px;
+                background: #711bff;
+                border-radius: 4px;
+                font-weight: 500;
+                font-size: 12px;
+                line-height: 15px;
+                color: #fff;
+                text-align: center;
+            }
+
+            .link-login .img-logo {
+                margin-right: 4px;
+                vertical-align: bottom;
+            }
+
+            .content-login .content-find {
+                float: left;
+            }
+
+            .content-find .img-find {
+                float: left;
+                margin: -1px 4px 0 0;
+            }
+
+            .content-find .link-id::after {
+                float: right;
+                display: block;
+                content: "";
+                width: 1px;
+                height: 12px;
+                margin: 0 4px;
+                background-color: #767676;
+            }
+
+            .content-find [class^="link"] {
+                float: left;
+            }
+
+            .content-login .content-join {
+                float: right;
+            }
+
+            .content-join [class$="join"] {
+                float: left;
+            }
+
+            .content-join .img-join {
+                margin: -1px 4px 0 0;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- class 넣을가 말까 고민되면 일단 넣는다? -->
+        <!-- 형태-의미 <- 이런식으로 -->
+        <article class="content-login clear-fix">
+            <!-- article에는 꼭 헤딩태그가 들어가야하지만, h2인 이유는, 다른 페이지에 넣었을 때 이미 h1이 있다는 가정을 했기 때문 -->
+            <h2 class="blind">위니브 로그인</h2>
+            <p class="txt-login">더 편리해진 위니브에 오신 것을 환영합니다.</p>
+            <a href="#none" class="link-login">
+                <!-- #none: 새로고침 방지 -->
+                <img
+                    src="./images/weniv-logo.png"
+                    alt="weniv"
+                    class="img-logo"
+                />
+                로그인
+            </a>
+            <div class="content-find">
+                <img src="./images/icon-lock.png" alt="" class="img-find" />
+                <a href="#none" class="link-id">아이디</a>
+                <a href="#none" class="link-pw">비밀번호찾기</a>
+            </div>
+            <div class="content-join">
+                <img src="./images/icon-user.png" alt="" class="img-join" />
+                <a href="#none" class="link-join">회원가입</a>
+            </div>
+        </article>
+    </body>
+</html>

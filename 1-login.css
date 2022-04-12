@@ -40,6 +40,7 @@ body {
 
 .card p + a {
     display: inline-block;
+    /* block으로 해도 돼 */
     width: 318px;
     height: 40px;
     background: #711bff;
@@ -51,11 +52,14 @@ body {
     /* vertical-align: bottom; */
     /* padding: 13px auto; */
     /* align-items: flex-end; */
+
+    padding: 10px 0;
 }
 
 .card p + a img {
     width: 64px;
     height: 18px;
+    vertical-align: top;
 }
 
 .card p + a span {
@@ -63,6 +67,8 @@ body {
     font-weight: 500px;
     line-height: 1.25;
     color: #ffffff;
+
+    vertical-align: bottom;
 }
 
 .others {
@@ -85,4 +91,6 @@ body {
 .others a img {
     width: 16px;
     height: 16px;
+
+    /* vertical-align: bottom; */
 }
