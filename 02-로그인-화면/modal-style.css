@@ -6,7 +6,8 @@
 body,
 h1,
 button,
-input {
+input,
+p {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -17,7 +18,19 @@ a {
 }
 
 button {
+    background-color: transparent;
     border: none;
+    cursor: pointer;
+}
+
+/* screen_out */
+.screen_out {
+    overflow: hidden;
+    position: absolute;
+    width: 0;
+    height: 0;
+    line-height: 0;
+    text-indent: -9999px;
 }
 
 /* 시작 */
@@ -26,9 +39,189 @@ body {
 }
 
 .container {
+    position: relative;
     width: 520px;
+    padding: 20px 0 25px;
 
     background-color: #fff;
     border: 1px solid #c4c4c4;
     border-radius: 10px;
+}
+
+h1 {
+    /* margin-bottom: 18px; <= 이거 안 준 이유: border-bottom 땜에. margin 주면 간격 안 띄워져서*/
+    padding-bottom: 18px;
+
+    /* h태그는 block~ */
+    text-align: center;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.25;
+
+    border-bottom: 1px solid #c4c4c4;
+}
+
+.close-button {
+    /* position은 안 쓰고 싶었는데 h1 태그의 가운데 정렬 때문에.. */
+    position: absolute;
+    top: 22px;
+    right: 24px;
+}
+
+.contents {
+    padding: 26px 24px 0;
+}
+
+.login-comment {
+    margin-bottom: 24px;
+
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+}
+
+.input-id,
+.input-password {
+    width: 100%;
+    padding: 15px 0 15px 16px;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.25;
+
+    border: 1px solid #c4c4c4;
+    border-radius: 5px;
+}
+
+.input-id {
+    margin-bottom: 10px;
+}
+
+.input-password {
+    margin-bottom: 16px;
+}
+
+.keep-login-button {
+    align-items: center;
+}
+
+.keep-login-text {
+    /* margin-bottom: 21px; inline이라서.. 밑 버튼에 margin-top~*/
+
+    color: #767676;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.25;
+}
+
+.login-button {
+    display: block;
+    padding: 14px 211px;
+    margin: 21px 0 20px;
+    width: 100%;
+
+    color: #fff;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.222222222222222;
+
+    background-color: #2f80ed;
+
+    border-radius: 5px;
+}
+
+/*join-find*/
+.join-find {
+    text-align: center;
+}
+
+.join,
+.find {
+    margin-bottom: 30px;
+
+    color: #767676;
+    font-weight: 400;
+    font-size: 14p;
+    line-height: 1.285714285714286;
+}
+
+.join::after {
+    margin: 0 12px;
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 14px;
+    background-color: #767676;
+}
+/* find 왼쪽의 요상한 여백 어떻게 처리해야하지..? span의 여백일까? 아님 가상 요소의 여백일까? */
+
+/*other-choice*/
+.or::before,
+.or::after {
+    content: "";
+    display: inline-block;
+    /* width 반응형으로 처리하고 싶은데.. */
+    width: 45%;
+    height: 1px;
+    background-color: #c4c4c4;
+}
+/* 습.. 가상요소랑.. 또는 양옆 마진 고민해봐 */
+.or::before {
+    float: left;
+}
+
+.or::after {
+    float: right;
+}
+
+.or {
+    margin-left: 5px;
+    clear: both;
+
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.285714285714286;
+}
+
+.account-login a {
+    position: relative;
+    display: block;
+    margin-bottom: 10px;
+    padding: 15px 0;
+    width: 100%;
+
+    text-align: center;
+    color: #767676;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.25;
+
+    border: 1px solid #000;
+    border-radius: 5px;
+}
+
+.account-login a:nth-child(1) {
+    margin-top: 20px;
+
+    border-color: #767676;
+}
+
+.account-login a:nth-child(2) {
+    border-color: #2d9cdb;
+}
+
+.account-login a:nth-child(3) {
+    border-color: #00bf18;
+}
+
+.account-login a:nth-child(4) {
+    margin-bottom: 0px;
+    border-color: #f2c94c;
+}
+
+.account-login a img {
+    position: absolute;
+    margin: auto 0;
+    /* display: block; */
+    left: 12px;
 }

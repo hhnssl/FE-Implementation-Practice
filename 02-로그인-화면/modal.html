@@ -16,47 +16,71 @@
     <body>
         <article class="container">
             <h1>로그인 또는 회원가입</h1>
-            <button>
+            <button class="close-button">
                 <img src="./image/close.png" alt="닫기 버튼" />
             </button>
-            <span>위니브에서 여러분의 궁금증을 해결하세요! :)</span>
 
-            <form action="#">
-                <label for="input-id">아이디(css로 가리기)</label>
-                <input type="text" placeholder="아이디" required autofocus />
-                <!-- autofocus:페이지 로딩될 때 자동 포커스 -->
+            <!-- contents 만든 이유: h1 border-bottom 땜에.. padding 주니까 선이 덜 그어져서 -->
+            <div class="contents">
+                <p class="login-comment">
+                    위니브에서 여러분의 궁금증을 해결하세요! :)
+                </p>
 
-                <label for="input-password">비밀번호(css로 가리기)</label>
-                <input type="password" placeholder="비밀번호" required />
+                <form action="#" method="post">
+                    <label for="input-id" class="screen_out">아이디</label>
+                    <input
+                        type="text"
+                        placeholder="아이디"
+                        class="input-id"
+                        required
+                        autofocus
+                    />
+                    <!-- autofocus:페이지 로딩될 때 자동 포커스 -->
 
-                <button type="button">
-                    <img src="./image/check-box.png" alt="" />
-                </button>
-                <span>로그인 상태 유지</span>
+                    <label for="input-password" class="screen_out"
+                        >비밀번호</label
+                    >
+                    <input
+                        type="password"
+                        placeholder="비밀번호"
+                        class="input-password"
+                        required
+                    />
 
-                <button type="submit">로그인</button>
-            </form>
-            <div class="other-choice">
-                <span>회원가입</span>
-                <span>아이디/비밀번호 찾기</span>
-                <span>또는</span>
-                <div class="account-login">
-                    <a href="#">
-                        <img src="./image/google-logo.png" alt="" />
-                        구글 계정으로 로그인
-                    </a>
-                    <a href="#">
-                        <img src="./image/facebook-logo.png" alt="" />
-                        페이스북 계정으로 로그인
-                    </a>
-                    <a href="#">
-                        <img src="./image/naver-logo.png" alt="" />
-                        네이버 계정으로 로그인
-                    </a>
-                    <a href="#">
-                        <img src="./image/kakao-logo.png" alt="" />
-                        카카오톡 계정으로 로그인
-                    </a>
+                    <button type="button" class="keep-login-button">
+                        <img src="./image/check-box.png" alt="" />
+                    </button>
+                    <span class="keep-login-text">로그인 상태 유지</span>
+
+                    <button type="submit" class="login-button">로그인</button>
+                </form>
+
+                <!-- join과 find를 정렬하기 위한 클래스 -->
+                <div class="join-find">
+                    <button class="join">회원가입</button>
+                    <button class="find">아이디/비밀번호 찾기</button>
+                </div>
+
+                <div class="other-choice">
+                    <span class="or">또는</span>
+                    <div class="account-login">
+                        <a href="#">
+                            <img src="./image/google-logo.png" alt="" />
+                            구글 계정으로 로그인
+                        </a>
+                        <a href="#">
+                            <img src="./image/facebook-logo.png" alt="" />
+                            페이스북 계정으로 로그인
+                        </a>
+                        <a href="#">
+                            <img src="./image/naver-logo.png" alt="" />
+                            네이버 계정으로 로그인
+                        </a>
+                        <a href="#">
+                            <img src="./image/kakao-logo.png" alt="" />
+                            카카오톡 계정으로 로그인
+                        </a>
+                    </div>
                 </div>
             </div>
         </article>
