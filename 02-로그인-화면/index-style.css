@@ -50,6 +50,8 @@ body {
     /* padding: 17px auto 15px;에서 auto를 넣으면 왜 상하 마진이 안먹히지?! 
         => padding은 auto가 없음.. 충격*/
     padding: 17px 0 15px;
+
+    /* block에 text-align이 먹히는 이유: https://www.codeit.kr/community/threads/10663 */
     text-align: center;
 
     color: #fff;
