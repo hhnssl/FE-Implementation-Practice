@@ -1,3 +1,5 @@
+/* .or & 로고 가운데 정렬 어케하는지 도저히.. */
+
 /* reset */
 * {
     font-family: "Spoqa Han Sans Neo", "sans-serif";
@@ -41,6 +43,7 @@ body {
 .container {
     position: relative;
     width: 520px;
+    margin: 50px auto;
     padding: 20px 0 25px;
 
     background-color: #fff;
@@ -102,11 +105,20 @@ h1 {
 }
 
 .keep-login-button {
-    align-items: center;
+    width: 22px;
+    height: 22px;
+
+    vertical-align: middle;
+    background-image: url(./image/check-box.png);
+}
+
+/* 유지는 안됨. 자스로 해야된다 */
+.keep-login-button:checked {
+    background-image: url(./image/checked-box.png);
 }
 
 .keep-login-text {
-    /* margin-bottom: 21px; inline이라서.. 밑 버튼에 margin-top~*/
+    /* margin-bottom: 21px;안먹힘 inline이라서.. 밑 버튼에 margin-top~*/
 
     color: #767676;
     font-weight: 500;
@@ -156,27 +168,20 @@ h1 {
 /* find 왼쪽의 요상한 여백 어떻게 처리해야하지..? span의 여백일까? 아님 가상 요소의 여백일까? */
 
 /*other-choice*/
+/* https://codepen.io/veamcamp/pen/dyJQwWr 종찬님 도움! */
 .or::before,
 .or::after {
-    content: "";
-    display: inline-block;
-    /* width 반응형으로 처리하고 싶은데.. */
-    width: 45%;
+    content: " ";
+    flex-grow: 1;
     height: 1px;
-    background-color: #c4c4c4;
-}
-/* 습.. 가상요소랑.. 또는 양옆 마진 고민해봐 */
-.or::before {
-    float: left;
-}
 
-.or::after {
-    float: right;
+    background-color: #c4c4c4;
 }
 
 .or {
-    margin-left: 5px;
-    clear: both;
+    display: flex;
+    gap: 20px;
+    align-items: center;
 
     font-weight: 400;
     font-size: 14px;
@@ -221,7 +226,8 @@ h1 {
 
 .account-login a img {
     position: absolute;
-    margin: auto 0;
-    /* display: block; */
+    display: inline-block;
+    vertical-align: middle;
+
     left: 12px;
 }
