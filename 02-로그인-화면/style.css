@@ -1,0 +1,62 @@
+/* reset */
+* {
+    font-family: "Spoqa Han Sans Neo", "sans-serif";
+}
+
+body,
+h1 {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* 시작 */
+body {
+    background-color: #eee;
+}
+
+.container {
+    width: 500px;
+    margin: 360px auto 0;
+    padding: 30px;
+
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.weniv-logo {
+    padding: 0 181px;
+    margin-bottom: 28px;
+}
+
+/* a와 span은 inline 이므로 margin-top | bottm 이 먹히지 않기 때문에 block으로 바꿈 */
+.introduction {
+    display: block;
+    /* text-align: center; */
+    margin: 0 115px 32px 116px;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.25;
+}
+
+.login-button {
+    display: block;
+    /* width: 100%; 없어도 되나? 없으면 자동 부모 100%? */
+    /* padding: 17px 189px 15px 190px; : 좌우 패딩때문에 부모 밖으로 삐져나감*/
+    /* padding: 17px auto 15px;에서 auto를 넣으면 왜 상하 마진이 안먹히지?! 
+        => padding은 auto가 없음.. 충격*/
+    padding: 17px 0 15px;
+    text-align: center;
+
+    color: #fff;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 1.272727272727273;
+
+    background-color: #2f80ed;
+    border-radius: 5px;
+}
