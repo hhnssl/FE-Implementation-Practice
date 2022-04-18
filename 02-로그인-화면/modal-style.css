@@ -105,25 +105,28 @@ h1 {
 }
 
 .keep-login-button {
-    width: 22px;
-    height: 22px;
-
-    vertical-align: middle;
-    background-image: url(./image/check-box.png);
+    display: none;
 }
 
-/* 유지는 안됨. 자스로 해야된다 */
-.keep-login-button:checked {
-    background-image: url(./image/checked-box.png);
-}
-
-.keep-login-text {
-    /* margin-bottom: 21px;안먹힘 inline이라서.. 밑 버튼에 margin-top~*/
-
+input[id="keep-login-button"] + label {
     color: #767676;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.25;
+    cursor: pointer;
+}
+
+input[id="keep-login-button"] + label em {
+    margin-right: 8px;
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    vertical-align: sub;
+    background: url("./image/check-box.png");
+}
+
+input[id="keep-login-button"]:checked + label em {
+    background: url("./image/checked-box.png");
 }
 
 .login-button {
