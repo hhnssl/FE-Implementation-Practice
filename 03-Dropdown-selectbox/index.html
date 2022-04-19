@@ -1,0 +1,39 @@
+<!-- select는 디테일한 꾸밈이 불가능하므로 button과 ul로 처리 -->
+
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Dropdown select</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="./style.css" />
+    </head>
+    <body>
+        <article class="container">
+            <!-- article이니까 이미 h1이 있는 메인태그 안에 있는 애라고 생각해서 h2 -->
+            <h2 class="screen_out">최애 프로그래밍 언어 선택</h2>
+
+            <button
+                name="select-develope-language"
+                id="select-develope-language"
+                class="select-language"
+            >
+                <ul>
+                    <li value="default" selected>최애 프로그래밍 언어</li>
+                    <li value="python">Python</li>
+                    <li value="java">Java</li>
+                    <li value="javaScript">JavaScript</li>
+                    <li value="c-sharp">C#</li>
+                    <li value="c-and-c-plus">C/C++</li>
+                </ul>
+            </button>
+        </article>
+    </body>
+</html>
