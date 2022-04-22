@@ -1,12 +1,77 @@
 body,
 h2,
-ul {
+ul,
+button {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Roboto", sans-serif;
 }
 
-ul {
+li {
     list-style: none;
+}
+
+button {
+    background-color: #fff;
+    border: none;
+}
+
+/* screen_out */
+.screen_out {
+    overflow: hidden;
+    position: absolute;
+    width: 0;
+    height: 0;
+    line-height: 0;
+    text-indent: -9999px;
+}
+
+/**/
+.container {
+    margin: 0 auto;
+}
+
+.choice-default {
+    margin-bottom: 9px;
+    padding: 13px 0 13px 14px;
+    width: 200px;
+
+    text-align: left;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.166666666666667;
+
+    box-sizing: border-box;
+    border: 1px solid #c4c4c4;
+    border-radius: 10px;
+}
+
+.choice-default:focus {
+    outline: 3px solid #f8e4ff;
+    border: 1px solid #9b51e0;
+}
+
+.choice-default::after {
+    float: right;
+    margin-right: 13px;
+    transform: translateY(25%);
+
+    width: 12px;
+    height: 8px;
+
+    display: block;
+    content: "";
+
+    background-image: url("./icon-Triangle-down.png");
+    background-size: contain;
+    background-position: right;
+    background-repeat: no-repeat;
+}
+
+.choice-container {
+    padding: 16px 0 16px 18px;
+    width: 200px;
+    border: 1px solid #c4c4c4;
+    border-radius: 10px;
 }

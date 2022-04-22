@@ -227,10 +227,29 @@ input[id="keep-login-button"]:checked + label em {
     border-color: #f2c94c;
 }
 
-.account-login a img {
+.account-login a div {
+    width: 28px;
+    height: 28px;
+    background: url(image/css_sprites.png) -1px -31px;
+
     position: absolute;
     display: inline-block;
     vertical-align: middle;
 
     left: 12px;
+}
+
+.account-login a:nth-child(1) {
+}
+
+.account-login a:nth-child(2) div {
+    background: url(image/css_sprites.png) -1px -1px;
+}
+
+.account-login a:nth-child(3) div {
+    background: url(image/css_sprites.png) -31px -31px;
+}
+
+.account-login a:nth-child(4) div {
+    background: url(image/css_sprites.png) -31px -1px;
 }
