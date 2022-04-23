@@ -72,6 +72,10 @@ button {
     background-repeat: no-repeat;
 }
 
+.choice-default:focus::after {
+    background-image: url("./icon-Triangle-up.png");
+}
+
 .choice-container {
     padding: 16px 0 16px 18px;
     width: 200px;
