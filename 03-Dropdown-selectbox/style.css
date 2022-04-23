@@ -1,6 +1,7 @@
 body,
 h2,
 ul,
+li,
 button {
     margin: 0;
     padding: 0;
@@ -29,10 +30,12 @@ button {
 
 /**/
 .container {
-    margin: 0 auto;
+    width: 200px;
+    margin: 50px auto;
 }
 
 .choice-default {
+    /* display: block;  */
     margin-bottom: 9px;
     padding: 13px 0 13px 14px;
     width: 200px;
